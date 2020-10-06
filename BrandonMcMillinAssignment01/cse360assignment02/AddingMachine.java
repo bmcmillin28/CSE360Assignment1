@@ -2,6 +2,7 @@ package cse360assignment02;
 
 public class AddingMachine {
 	private int total;
+	private String operations = "0";
 	
 	public AddingMachine() {
 		total = 0; // not needed - included for clarity
@@ -9,26 +10,30 @@ public class AddingMachine {
 	
 	//gets total
 	public int getTotal() {
-		return 0;
+		return total;
 	}
 	
 	//adds entered value
 	public void add(int value) {
-		
+		total += value;
+		operations += " + ";
+		operations += value;
 	}
 	
 	//subtracts entered value
 	public void subtract(int value) {
-		
+		total -= value;
+		operations += " - ";
+		operations += value;
 	}
 	
 	//returns a string output
 	public String toString() {
-		return "";
+		return operations;
 	}
 	
-	//clears data
+	//clears history string
 	public void clear() {
-		
+		operations = "0";
 	}
 }
